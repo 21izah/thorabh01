@@ -1,0 +1,498 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* header  */
+
+.header {
+  /* background-color: green; */
+  height: 70px;
+  padding: 0px 10%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blurs the background behind the header */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  /* border-radius: 10px; Optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.logo {
+  height: 70px;
+  width: 12%;
+
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+}
+.nav {
+  height: 70px;
+  width: 35%;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav > ul {
+  display: flex;
+  height: 70px;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: black; */
+  list-style-type: none; /* removes the bullet point*/
+}
+
+.nav > ul > li {
+  /* background-color: blue; */
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav > ul > li:last-child {
+  padding: 10px;
+  background-color: green;
+  border-radius: 5px;
+  /* background-color: blue; */
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav > ul > li:last-child:hover {
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  /* background-color: blue; */
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav > ul > li > a {
+  font-weight: bold;
+  transition: color 0.3s ease;
+  color: white;
+  text-decoration: none; /* removes the underline*/
+}
+.nav > ul > li > a:hover {
+  color: orange;
+  text-decoration: none; /* removes the underline*/
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger,
+.close {
+  font-size: 30px;
+  color: white;
+}
+
+.close {
+  display: none; /* Hide close icon initially */
+}
+
+/* Styles when scrolled */
+/* .header.scrolled {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* .nav ul li a.scrolled-link {
+  color: black; /* Text color with glass effect */
+/* } */
+
+/* header  */
+
+.banner {
+  width: 100%;
+  background-color: blue;
+}
+
+.slide {
+  height: 600px;
+  width: 100%;
+  background-color: red;
+  background-image: url(./images/pexels-pixabay-269948.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 0px 10%;
+}
+
+.details {
+  width: 50%;
+  height: 400px;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  padding: 20px;
+}
+.details > p {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: orange;
+}
+
+.highlight {
+  color: white;
+  font-weight: 700;
+}
+
+.main_btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  height: 40px;
+  font-size: 18px;
+  border: 1px solid white;
+  /* margin: 20px; */
+}
+
+.main_btn:hover {
+  background-color: transparent;
+  border-color: #8e563e;
+}
+
+/* https://clbxczqm-5500.uks1.devtunnels.ms/ */
+
+/* category css */
+.categories {
+  padding: 30px 10%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.categories > h1 {
+  color: white;
+}
+
+.content {
+  width: 100%;
+
+  /* background-color: aquamarine; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2%;
+}
+
+.category {
+  /* background-color: #423e8e; */
+
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border: 1px solid orange;
+  height: 200px;
+}
+
+.category:nth-child(1) {
+  background-image: url(./images/pexels-binyaminmellish-140039.jpg);
+}
+.category:nth-child(2) {
+  background-image: url(./images/pexels-chuck-2820899.jpg);
+}
+.category:nth-child(3) {
+  background-image: url(./images/pexels-cottonbro-4761792.jpg);
+}
+.category:nth-child(4) {
+  background-image: url(./images/pexels-furknsaglam-1596977-3131405.jpg);
+}
+
+.cat_details {
+  color: #4caf50;
+
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid green;
+}
+.cat_details:hover {
+  background-color: green;
+  border-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+/* category css */
+
+/* product */
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 10%;
+  row-gap: 50px;
+  background-color: black;
+  height: 100%;
+}
+.products > h1 {
+  color: white;
+}
+
+.products_content {
+  width: 100%;
+
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: calc(20% / 3); /* 20% (100%-20*4(images per row)= 20%) */
+  row-gap: 30px;
+}
+
+.product {
+  border: 1px solid orange;
+  width: 20%;
+
+  /* background-color: red; */
+  overflow: hidden;
+  border-radius: 10px;
+  /* background-image: url(./images/pexels-pixabay-269948.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* margin: 20px; */
+}
+
+.product_img {
+  height: 300px;
+  background-color: blue;
+}
+.product_img > img {
+  width: 100%;
+  height: 300px;
+  background-color: blue;
+  overflow: hidden;
+}
+
+.product_details {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  color: black;
+}
+.product_details > h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product_details > button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* product */
+
+/* css for mobile */
+
+/* @media (max-width: 576px) {
+  .nav {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 500px);
+    row-gap: 20px;
+  }
+} */
+
+.hide {
+  display: none;
+}
+
+.hamburger,
+.close {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close {
+  display: none; /* Initially hidden */
+}
+
+/* css for mobile */
+@media only screen and (max-width: 600px) {
+  .menu-icon {
+    display: block; /* Show the menu icon */
+
+    align-self: center; /* Ensure it's centered vertically */
+    box-shadow: none;
+    transition: none;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+  .nav {
+    display: none;
+  }
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: green;
+    height: 350px;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+
+    z-index: 100; /* Ensure the menu is on top */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Add space between links */
+  }
+  .nav > ul > li:last-child {
+    border-radius: 5px;
+    /* background-color: blue; */
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .nav ul li a {
+    color: white; /* Adjust color */
+    font-size: 20px; /* Increase font size for easier touch */
+    padding: 10px 0;
+    display: block; /* Make the links fill the container width */
+    width: 100%;
+  }
+
+  /* .nav.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: pink;
+    padding: 10px 0;
+    text-align: center;
+  } */
+
+  /* .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  } */
+  .details {
+    width: 100%;
+  }
+
+  .details > p {
+    font-size: 30px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+  /* .slide {
+    height: 700px;
+  }
+  .overlay {
+    height: 700px;
+  } */
+  .main_btn {
+    font-size: small;
+  }
+  .main_btn:hover {
+    background-color: transparent;
+    border-color: #8e563e;
+  }
+  .content {
+    grid-template-columns: 1fr;
+
+    row-gap: 2%;
+    column-gap: 2%;
+  }
+
+  .categories > h1 {
+    color: white;
+    font-size: large;
+  }
+
+  .product {
+    width: 100%;
+  }
+}
+
+/* css for mobile */
+
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav ul li {
+    margin: 0 15px;
+  }
+}
+
+/* Tablets */
+
+/* common css */
+
+.section_title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+/* common css */
